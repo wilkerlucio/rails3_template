@@ -22,6 +22,7 @@ apply "#{@template_path}/jammit.rb"
 apply "#{@template_path}/jquery.rb"
 apply "#{@template_path}/underscore.rb"
 apply "#{@template_path}/jcheck.rb"
+apply "#{@template_path}/qunit.rb"
 
 # deploy
 apply "#{@template_path}/capistrano.rb"
