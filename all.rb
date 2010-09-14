@@ -20,6 +20,7 @@ apply "#{@template_path}/simple_form.rb"
 apply "#{@template_path}/barista.rb"
 apply "#{@template_path}/jammit.rb"
 apply "#{@template_path}/jquery.rb"
+apply "#{@template_path}/underscore.rb"
 apply "#{@template_path}/jcheck.rb"
 
 # deploy
