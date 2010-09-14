@@ -1,0 +1,11 @@
+javascripts:
+  workspace:
+    - public/javascripts/vendor/jquery-1.4.2.js
+    - public/javascripts/vendor/rails.js
+    - public/javascripts/vendor/jcheck.js
+    - public/javascripts/application.js
+
+stylesheets:
+  workspace:
+    - public/stylesheets/vendor/jcheck.css
+    - public/stylesheets/application.css
