@@ -22,6 +22,9 @@ apply "#{@template_path}/jammit.rb"
 apply "#{@template_path}/jquery.rb"
 apply "#{@template_path}/jcheck.rb"
 
+# deploy
+apply "#{@template_path}/capistrano.rb"
+
 # bundler
 apply "#{@template_path}/bundler.rb"
 
