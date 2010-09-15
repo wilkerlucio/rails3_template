@@ -1,34 +1,42 @@
 @template_path = File.dirname(__FILE__)
+@args = $*
+
+scripts = []
 
 # clean up for start
-apply "#{@template_path}/cleanup.rb"
+scripts << "cleanup"
 
 # testing setup
-apply "#{@template_path}/rspec.rb"
-apply "#{@template_path}/steak.rb"
-apply "#{@template_path}/database_cleaner.rb"
-apply "#{@template_path}/factory_girl.rb"
+scripts << "rspec"
+scripts << "steak"
+scripts << "database_cleaner"
+scripts << "factory_girl"
 
 # database
-apply "#{@template_path}/mongoid.rb"
+scripts << "mongoid"
 
 # productivity boost
-apply "#{@template_path}/inherited_resources.rb"
-apply "#{@template_path}/simple_form.rb"
+scripts << "inherited_resources"
+scripts << "simple_form"
 
 # front-end things
-apply "#{@template_path}/barista.rb"
-apply "#{@template_path}/jammit.rb"
-apply "#{@template_path}/jquery.rb"
-apply "#{@template_path}/underscore.rb"
-apply "#{@template_path}/jcheck.rb"
-apply "#{@template_path}/qunit.rb"
+scripts << "barista"
+scripts << "jammit"
+scripts << "jquery"
+scripts << "underscore"
+scripts << "jcheck"
+scripts << "qunit"
 
 # deploy
-apply "#{@template_path}/capistrano.rb"
+scripts << "capistrano"
 
 # bundler
-apply "#{@template_path}/bundler.rb"
+scripts << "bundler"
 
 # start git project
-apply "#{@template_path}/git.rb"
+scripts << "git"
+
+# execute scripts
+scripts.each do |script|
+  apply "#{@template_path}/#{script}.rb" unless @args.include? "--skip-#{script}"
+end
