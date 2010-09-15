@@ -6,7 +6,7 @@ inject_into_file "config/application.rb", :after => "config.generators do |gener
 end
 
 # configure rspec gem
-gem 'rspec-rails', '2.0.0.beta.20', :group => :test
+gem 'rspec-rails', '2.0.0.beta.22', :group => :test
 
 @delayed << lambda {
   # generate
