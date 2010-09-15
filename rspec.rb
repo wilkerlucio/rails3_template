@@ -18,7 +18,8 @@ gem 'rspec-rails', '2.0.0.beta.20', :group => :test
     "  config.run_all_when_everything_filtered = true\n"
   end
   
-  gsub_file "spec/spec_helper.rb", %{config.use_transactional_fixtures = true}, %{config.use_transactional_fixtures = false}
+  gsub_file "spec/spec_helper.rb", /config\.fixture_path.+/, %{}
+  gsub_file "spec/spec_helper.rb", %{config.use_transactional_fixtures = true}, %{}
   
   # rspec runner configuration
   get "#{File.dirname(__FILE__)}/resources/dot_rspec", ".rspec", :force => true
