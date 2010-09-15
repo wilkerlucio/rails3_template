@@ -30,8 +30,8 @@ end
 gsub_file "config/application.rb", "require 'rails/all'", %{require "active_record/railtie"\nrequire "action_controller/railtie"\nrequire "action_mailer/railtie"\nrequire "active_resource/railtie"}
 
 # added lib folder to load path
-inject_into_file "spec/spec_helper.rb", :after => "config.autoload_paths += %W(#{config.root}/extras)\n" do
-  "    config.autoload_paths += %W(#{config.root}/lib)\n"
+inject_into_file "config/application.rb", :after => "config.autoload_paths += %W(\#{config.root}/extras)\n" do
+  "    config.autoload_paths += %W(\#{config.root}/lib)\n"
 end
 
 # rails 3 generators gem
