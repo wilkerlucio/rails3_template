@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<%= include_stylesheets :workspace %>
+		<%= csrf_meta_tag %>
+	</head>
+	<body>
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+		
+		<%= yield %>
+		
+		<%= include_javascripts :workspace %>
+		<%= yield :javascripts %>
+	</body>
+</html>
