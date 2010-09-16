@@ -1,0 +1,14 @@
+<%%= simple_form_for(@<%= singular_name %>) do |f| %>
+  <%%= render :partial => 'layouts/form_errors', :object => @<%= singular_name %> %>
+
+  <div class="inputs">
+  <%- attributes.each do |attribute| -%>
+    <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %> %>
+  <%- end -%>
+  </div>
+
+  <div class="actions">
+    <%%= f.button :submit %>
+  </div>
+<%% end %>
+<%% content_for :javascripts, jcheck_for(@<%= singular_name %>) %>
