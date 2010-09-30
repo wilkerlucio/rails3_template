@@ -2,11 +2,12 @@
 
 # append generator
 inject_into_file "config/application.rb", :after => "config.generators do |generator|\n" do
-  (" " * 6) + "generator.test_framework :rspec, :views => false\n"
+  (" " * 6) + "generator.test_framework :rspec, :view_specs => false, :controller_specs => false, :routing_specs => false\n"
 end
 
 # configure rspec gem
 gem 'rspec-rails', '2.0.0.beta.22', :group => :test
+gem 'mocha', '0.9.8', :group => :test
 
 @delayed << lambda {
   # generate
@@ -14,6 +15,7 @@ gem 'rspec-rails', '2.0.0.beta.22', :group => :test
   
   # configure filters
   inject_into_file "spec/spec_helper.rb", :after => "config.mock_with :rspec\n" do
+    "  config.mock_with :mocha\n" +
     "  config.filter_run :focus => true\n" +
     "  config.run_all_when_everything_filtered = true\n"
   end
@@ -24,4 +26,3 @@ gem 'rspec-rails', '2.0.0.beta.22', :group => :test
   # rspec runner configuration
   get "#{File.dirname(__FILE__)}/resources/dot_rspec", ".rspec", :force => true
 }
-
