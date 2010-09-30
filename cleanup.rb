@@ -35,7 +35,7 @@ inject_into_file "config/application.rb", :after => "config.autoload_paths += %W
 end
 
 # apply new layout
-get "#{File.dirname(__FILE__)}/resources/application.html.erb", "app/views/layout/application.html.erb", :force => true
+get "#{File.dirname(__FILE__)}/resources/application.html.erb", "app/views/layouts/application.html.erb", :force => true
 
 # rails 3 generators gem
 gem 'rails3-generators', '0.13.0'
