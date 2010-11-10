@@ -1,5 +1,5 @@
 # setup jcheck_rails gem
-gem 'jcheck_rails', '0.5.0'
+gem 'jcheck_rails'
 
 @delayed << lambda {
   # download front-end files

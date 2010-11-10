@@ -1,5 +1,5 @@
 # setup factory girl gem
-gem 'factory_girl', '1.3.2'
+gem 'factory_girl'
 
 # configure factory girl generator
 inject_into_file "config/application.rb", :after => "config.generators do |generator|\n" do

@@ -1,5 +1,5 @@
 # setup database cleaner gem
-gem 'database_cleaner', '0.5.2', :group => :test
+gem 'database_cleaner'
 
 @delayed << lambda {
   # setup database cleaner strategy for rspec

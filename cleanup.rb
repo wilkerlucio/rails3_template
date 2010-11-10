@@ -38,4 +38,4 @@ end
 get "#{File.dirname(__FILE__)}/resources/application.html.erb", "app/views/layouts/application.html.erb", :force => true
 
 # rails 3 generators gem
-gem 'rails3-generators', '0.13.0'
+gem 'rails3-generators'

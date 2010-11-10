@@ -1,7 +1,7 @@
 # setup mongoid gem
-gem 'bson_ext', '1.0.4'
-gem 'mongoid', '2.0.0.beta.19'
-gem 'remarkable_mongoid', '0.4.0', :group => :test
+gem 'bson_ext', '1.1.2'
+gem 'mongoid', '>=2.0.0.beta.20'
+gem 'remarkable_mongoid', :group => :test
 
 # append generator
 inject_into_file "config/application.rb", :after => "config.generators do |generator|\n" do

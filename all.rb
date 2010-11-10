@@ -28,7 +28,7 @@ scripts << "jcheck"
 scripts << "qunit"
 
 # deploy
-scripts << "capistrano"
+# scripts << "capistrano"
 
 # bundler
 scripts << "bundler"

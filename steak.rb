@@ -1,6 +1,6 @@
 # setup steak and capybara gems
-gem 'steak', :git => "git://github.com/cavalle/steak.git", :ref => "4956708bfe57c48991c3", :group => :test
-gem 'capybara', '0.3.9', :group => :test
+gem 'steak', '>= 1.0.0.rc.1', :group => :test
+gem 'capybara', :group => :test
 
 @delayed << lambda {
   # setup steak
