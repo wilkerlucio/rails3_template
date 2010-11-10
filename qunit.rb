@@ -1,6 +1,6 @@
 # download qunit files
-get "http://github.com/jquery/qunit/raw/master/qunit/qunit.js", "public/javascripts/vendor/qunit.js"
-get "http://github.com/jquery/qunit/raw/master/qunit/qunit.css", "public/stylesheets/vendor/qunit.css"
+get "#{File.dirname(__FILE__)}/resources/qunit.js", "public/javascripts/vendor/qunit.js"
+get "#{File.dirname(__FILE__)}/resources/qunit.css", "public/stylesheets/vendor/qunit.css"
 
 @delayed << lambda {
   # generate controller for qunit
