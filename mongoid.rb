@@ -1,5 +1,5 @@
 # setup mongoid gem
-gem 'bson_ext', '1.1.2'
+gem 'bson_ext', '1.2.0'
 gem 'mongoid', '>=2.0.0.beta.20'
 gem 'remarkable_mongoid', :group => :test
 

@@ -2,12 +2,13 @@
 
 # append generator
 inject_into_file "config/application.rb", :after => "config.generators do |generator|\n" do
-  (" " * 6) + "generator.test_framework :rspec, :view_specs => false, :controller_specs => false, :routing_specs => false\n"
+  (" " * 6) + "generator.test_framework :rspec\n"
 end
 
 # configure rspec gem
 gem 'rspec-rails', :group => :test
 gem 'mocha', :group => :test
+gem 'fuubar', :group => :test
 
 @delayed << lambda {
   # generate

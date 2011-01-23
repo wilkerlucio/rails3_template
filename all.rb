@@ -8,7 +8,7 @@ scripts << "cleanup"
 
 # testing setup
 scripts << "rspec"
-scripts << "steak"
+# scripts << "steak"
 scripts << "database_cleaner"
 scripts << "factory_girl"
 
